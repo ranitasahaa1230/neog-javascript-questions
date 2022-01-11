@@ -148,14 +148,15 @@
 //   const [operation,members] = avengers;
 //   ---------------------------------------------------------------------------------------------
 
+// Convert ES6 to ES5
 // const packIt = (...args) => console.log(args)
 // packIt(1,2,3,5,5)
 
 //ES5
-// function packIt(args){
-//     console.log(args)
-// }
-// packIt(1,2,3,5,5)
+var packIt=function(n1,n2,n3,n4,n5){
+    return console.log(n1,n2,n3,n4,n5);
+}
+  packIt(1,2,3,5,5)
 // ----------------------------------------------------------------------
 
 //output
@@ -174,7 +175,7 @@ const obj = {
 const {c : aloo = [2,3,4].push(5), aloo} = obj 
 
 console.log(aloo) //err
-//error on line 15 because when we extract c from obj it was renamed as aloo 
+//error on line 175 because when we extract c from obj it was renamed as aloo 
 // and has default value of 4 ([2,3,4].push(5) returns the updated length of the array) 
 // And redeclaring a const variable again will cause an error.
 
