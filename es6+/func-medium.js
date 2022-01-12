@@ -44,9 +44,22 @@
 // Example:
 // Input: charAt("neoGcamp", 4) ––> Output: c
 
-const charAt=(str,i)=>
-console.log(charAt("neoGcamp", 4))
+// const charAt=(str,i)=>str.charAt(i)
+// console.log(charAt("neoGcamp",4))
+// //------------------------------------------------------------------
 
 // 6. Given two dates, your function should return which one comes before the other.
 // Example:
 // Input: minDate('02/05/2021', '24/01/2021') ––> Output: 24/01/2021
+
+const minDate=(date1,date2)=>{
+    const datePart1=date1.split('/');
+    const datePart2=date2.split('/');
+    const dateObj1=new Date(datePart1[2], datePart1[1]-1,datePart1[0]);
+    const dateObj2=new Date(datePart2[2], datePart2[1]-1,datePart2[0])
+    if(dateObj1<dateObj2){
+        return date1;
+    }else return date2;
+
+}
+console.log(minDate('02/05/2021', '24/01/2021'))
