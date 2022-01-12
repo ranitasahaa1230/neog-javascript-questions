@@ -54,6 +54,9 @@
 
 //ES6
 // const [CEO,Mentor] = ["Tanvi", "Swap", "Tanay", "MA", "CA", "PA", "TA"];
+let Neog = ["Tanvi", "Swap", "Tanay", "MA", "CA", "PA", "TA"];
+let [CEO , Mentor ] = Neog;
+console.log(CEO, Mentor);
 // ----------------------------------------------------------------------------------------------------------
 
 // var arr = ["MA", "TA", "PA", "CA"];
@@ -66,6 +69,10 @@
 // const [firstName, surname] = ["MA", "TA", "PA", "CA"];
 // console.log(`${firstName}`);
 // console.log(surname);
+
+// const arr1 = ["MA", "TA", "PA", "CA"];
+// const [first, second,...rest ] = arr1;
+// console.log(first, second);
 // --------------------------------------------------------------------------------------------
 
 // var Aaloo = "Tasty";
@@ -145,18 +152,28 @@
 //       }
 //     ]
 //   };
-//   const [operation,members] = avengers;
-//   ---------------------------------------------------------------------------------------------
+// const {operation,members} = avengers;
+//       console.log(operation)
+//       console.log(members)
+      //   ---------------------------------------------------------------------------------------------
 
 // Convert ES6 to ES5
 // const packIt = (...args) => console.log(args)
 // packIt(1,2,3,5,5)
 
 //ES5
-var packIt=function(n1,n2,n3,n4,n5){
-    return console.log(n1,n2,n3,n4,n5);
-}
-  packIt(1,2,3,5,5)
+// function packIt(){
+//  console.log(arguments); //[Arguments] { '0': 1, '1': 2, '2': 3, '3': 5, '4': 5 }
+// }
+//   packIt(1,2,3,5,5) //not getting result as expected
+
+//   function packIt(){
+//       const args=Array.prototype.slice.call(arguments)
+//     console.log(args); //[ 1, 2, 3, 5, 5 ]
+//    }
+//      packIt(1,2,3,5,5)
+
+
 // ----------------------------------------------------------------------
 
 //output
@@ -167,16 +184,36 @@ var packIt=function(n1,n2,n3,n4,n5){
 // ---------------------------------------------------------------------------
 
 //output
-const obj = {
-    aloo : 1,
-    bhallo : 2
-}
+// const obj = {
+//     aloo : 1,
+//     bhallo : 2
+// }
 
-const {c : aloo = [2,3,4].push(5), aloo} = obj 
+// const {c : aloo = [2,3,4].push(5), aloo} = obj 
 
-console.log(aloo) //err
+// console.log(aloo) //err
 //error on line 175 because when we extract c from obj it was renamed as aloo 
 // and has default value of 4 ([2,3,4].push(5) returns the updated length of the array) 
 // And redeclaring a const variable again will cause an error.
 
+// const obj = {
+    //         aloo : 1,
+    //         bhallo : 2
+    //     }
+        
+    //     var {c : aloo = [2,3,4].push(5), aloo} = obj 
+    //     console.log(aloo); //1
+    //     console.log(c)//not defined
+    
+        
+    // const obj = {
+    //     aloo : 1,
+    //     bhallo : 2,
+    //     c:78
+    // }
+    
+    // var {c :d, aloo} = obj 
+    // console.log(aloo); //1
+    // console.log(d)//78
+    
 
