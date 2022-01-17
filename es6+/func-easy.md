@@ -25,7 +25,7 @@ console.log(noOfWords("We are neoGrammers"));
 ```
 - Another Approach
 ```
-const noOfWords=n=>{return n.split(' ').length}; //take gap b/w ' '
+const noOfWords=n=> n.split(' ').length; //take gap b/w ' '
 console.log(noOfWords("We are neoGrammers"));
 ```
 --------------------------------------------------------------
@@ -52,6 +52,12 @@ Input: findMax(3,5,9,1) ––> Output: 9
  console.log(findMax(3,5));
 console.log(findMax(3,5,9,1));
 ```
+- Another Approach
+```
+const findMax = (...numbers) => Math.max(...numbers);
+console.log(findMax(3,5));
+console.log(findMax(3,5,9,1));
+```
 --------------------------------------------------------------------------
 
 6. Given three angles of a triange, your function should return if it is a scalene, isosceles, equilateral triangle or not a triangle at all. Example:
@@ -74,9 +80,23 @@ const typeOfTriangle = (x, y, z) => {
   };
   
   typeOfTriangle(40, 40, 100);
+  - Another Approach
+  ```
+  const typeOfTriangle = (a, b, c) => {
+  if (a === b && a === c && a + b + c === 180) {
+    return "Equilateral Triangle";
+  } else if ((a === b || b === c || a === c) && a + b + c === 180) {
+    return "isosceles Triangle";
+  } else if (a + b + c === 180) {
+    return "Scalene Triangle";
+  } else {
+    return "Not a Triangle";
+  }
+};
+console.log(typeOfTriangle(45, 90, 45));
   ```
   
-  ```
+  ##ES5
   // function typeOfTriangle(x,y,z){
   //     const sum=x+y+z;
   //     if(sum === 180 && x > 0 && x > 0 && x > 0){
