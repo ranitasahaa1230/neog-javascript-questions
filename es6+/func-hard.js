@@ -8,10 +8,14 @@
 // Example:
 // Input: toSentenceCase('we are neoGrammers') ––> Output: We Are NeoGrammers
 
+const toSentenceCase = (str) => str.split(" ").map((item) => item[0].toUpperCase() + item.slice(1)).join(' ');
+console.log(toSentenceCase("we are neoGrammers"));
+
 
 //3. Given an array of numbers, your function should return an array in the ascending order.
 // Example:
 // Input: sortArray([100,83,32,9,45,61]) ––> Output: [9,32,45,61,83,100]
+
 
 
 
