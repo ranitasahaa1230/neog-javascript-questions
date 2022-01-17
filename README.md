@@ -1,1 +1,1 @@
-# neog-practice-questions
+# neog-javascript-questions
