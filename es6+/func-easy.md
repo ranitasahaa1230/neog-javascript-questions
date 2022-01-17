@@ -75,6 +75,7 @@ const typeOfTriangle = (x, y, z) => {
   
   typeOfTriangle(40, 40, 100);
   ```
+  
   ```
   // function typeOfTriangle(x,y,z){
   //     const sum=x+y+z;
@@ -94,3 +95,4 @@ const typeOfTriangle = (x, y, z) => {
   
   // typeOfTriangle(30,60,90)
   ```
+  ------------------------------------------------------------------
