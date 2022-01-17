@@ -33,6 +33,11 @@ console.log(arrayLength([1,5,3,7,8]))
   }
   console.log(replace([1,5,3,5,6,8], 5, 10))
 ```
+- Another Approach
+```
+const replaceArray = (arr, a, b) => arr.map(item => item === a?b:item);
+console.log(`Replaced Array = ${replaceArray([1, 3, 4, 5, 6, 5], 5, 10)}`);
+```
 ------------------------------------------------------------------------------------------------------
 
 4. Given two arrays, your function should return single merged array.
@@ -50,6 +55,11 @@ Input: charAt("neoGcamp", 4) ––> Output: c
 ```
  const charAt=(str,i)=>str.charAt(i)
   console.log(charAt("neoGcamp",4))
+```
+- Another Approach
+```
+const getChar = (a, i) => a[i];
+console.log(getChar("neoGcamp", 4));
 ```
 ------------------------------------------------------------------
 
