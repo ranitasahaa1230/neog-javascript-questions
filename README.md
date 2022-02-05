@@ -1,1 +1,1 @@
-# neog-javascript-questions
+# neog-questions-22
