@@ -36,4 +36,20 @@ const reduceObj=(oddEvenObj,num)=>num%2===0 ? {...oddEvenObj,even:oddEvenObj.eve
 const oddEvenObj={even:0,odd:0}
 // console.log(reduceObj(oddEvenObj,2))
 // console.log(reduceObj(oddEvenObj,3))
-console.log(arr1.reduce(reduceObj,oddEvenObj));
+// console.log(arr1.reduce(reduceObj,oddEvenObj));
+
+const add=(n1)=>n2=>n1+n2;
+// console.log(add(4,2));
+const four=add(4,2);
+// console.log(four);
+// console.log(four(3))
+
+const getYourName=name=>msg=>console.log(`Hi ${name}, send your ${msg}`);
+// const ranitaLogger=getYourName("ranita");
+// const log=ranitaLogger("good work");
+
+const getName=msg=>`Ranita says ${msg}`;
+const getID=msg=>`ID:243 :: ${msg}`;
+const composeF=msg=>getID(getName(msg));
+// console.log(getID("welcomee"));
+console.log(composeF("welcome"));
