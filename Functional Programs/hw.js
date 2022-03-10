@@ -48,17 +48,50 @@ const myReduceeIn=num=>num.map((acc)=>( acc%2===0 ? acc-1:acc+1))
 // console.log(myReduceeIn(numbers2))
 
 const myReduceeInSum=num=>num.reduce((acc,cval)=>cval%2===0 ? ({...acc,even:acc.even+cval}) : ({...acc,odd:acc.odd+cval}),{even:0,odd:0})
-console.log(myReduceeInSum(numbers2))
+// console.log(myReduceeInSum(numbers2))
 
 const myReduceeInSum2=(acc,cval)=>cval%2===0 ? {...acc,even:acc.even+cval} : {...acc,odd:acc.odd+cval}
 // console.log(numbers2.reduce(myReduceeInSum2,{even:0,odd:0}))
 
 // Return object with sum of odd and even numbers separately
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const myReduceeInObjm=(num)=>num.reduce((acc,cval)=> (cval.length in acc ? ({...acc,[cval.length]:acc[cval.length]+1}) : ({...acc,[cval.length]:1})),{})
+// console.log(myReduceeInObjm(words))
 
 
+// const numLengthArray = words.reduce((accumulator, currentValue) => accumulator[currentValue.length] ? {...accumulator, [currentValue.length] : accumulator[currentValue.length]+1} :  {...accumulator, [currentValue.length]: 1 }, {});
+//             console.log(numLengthArray);
 
 
+const wordsWithVowel = words.filter(word => word.includes('a') || word.includes('e') || word.includes('i') || word.includes('o') || word.includes('u'))
+            // console.log(wordsWithVowel);
 
+            const filterFunction = word => word.includes('a') || word.includes('e') || word.includes('i') || word.includes('o') || word.includes('u');
+            const filterWordsWithVowel = words => words.filter(filterFunction);
+            // console.log(filterWordsWithVowel(words));
 
+const numLengthArr=num=>num.map((acc)=>({key:acc, value:acc.length}))
+// console.log(numLengthArr(words));
 
+// Write your own reduce using for loop
+const arr=[18, 24, 1, 56, 74, 89, 37, 22]
+const arrreduce=num=>num.reduce((acc,cval)=>acc+cval)
+// console.log(arrreduce(arr,0))
+
+const reduceUsingFor=arr1=>{
+    let acc=0;
+    for(let b of arr1){
+        acc+=b;
+    }
+    return acc;
+}
+console.log(reduceUsingFor([18, 24, 1, 56, 74, 89, 37, 22]));
+
+// const reduceUsingFor = array => {
+//     let accumulator = 0;
+//     for(let a of array) {
+//         accumulator += a;
+//     }
+//     return accumulator;
+// } 
+// console.log(reduceUsingFor([18, 24, 1, 56, 74, 89, 37, 22]));
