@@ -96,16 +96,41 @@ const inventory = [
   {name: 'bulbs', quantity: 5},
   {name: 'stove', quantity: 1}    
 ];
-
-// console.log(inventory.reduce(myKeyy,{}))
+const myKeyy=(item)=>item.quantity <2 
+const myKeyy1=((acc,cval)=> acc+cval.quantity)
+const myKeyy2=((acc,cval)=> cval.quantity ===0 ? ({...acc,...cval}) : ({...acc})) //filter
+// console.log(inventory.reduce(myKeyy2,{}))
+// console.log(inventory.reduce(myKeyy1,0))
+// console.log(inventory.filter(myKeyy))
 
 const arrj = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"]
 // console.log(arrj.join("-"))
 
 const inputt=224345687;
-const insertHyphenBetweenNumsWithReduce = numAsString => numAsString.split('').reduce((acc, currentNum) => )
-
+const insertHyphenBetweenNumsWithReduce = (numAsString) => {
+  const digitArr=numAsString.split('');
+  const result=digitArr.reduce((acc,cval,index)=>((digitArr[index] %2===0 && digitArr[index+1] %2===0) ? (acc+cval+"-") : (acc+cval)),"")
+  return result
+  }
 console.log(insertHyphenBetweenNumsWithReduce('' + inputt))
+
+// const inputt = 224345686;
+// const insertHyphenBetweenNumsWithReduce = (numAsString) => {
+//   const digitArray = numAsString.split("");
+//   const result = digitArray.reduce((acc, curr, index) => {
+//     if (digitArray[index] % 2 == 0 && digitArray[index + 1] % 2 == 0) {
+//       return (acc = acc + curr + "-");
+//     } else {
+//       return (acc = acc + curr);
+//     }
+//   }, "");
+
+//   return result;
+// };
+
+
+// console.log(insertHyphenBetweenNumsWithReduce("" + inputt));
+
 
 const caps=["neogrammer", "neoG"]
 // console.log(caps[1].toUpperCase())
@@ -140,5 +165,7 @@ const flat2=numArray=>numArray.reduce((acc,cval)=>[...acc,...cval],[])
 //   'c', 'd', 'e',
 //   'e', 'd', 'f'
 // ]
+
+//{a: 1, b: 1, c: 2, d: 2, e: 2, f: 1}
 // console.log(getNumOccurences(input))
 
