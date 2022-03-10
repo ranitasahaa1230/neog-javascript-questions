@@ -96,8 +96,3 @@ const compId=(msg)=>`id is 12345 :: ${msg}`
 const compF=(msg)=>compId(compN(msg))
 // console.log(compF("awesome besttttttttt"))
 
-
-// const increment=(num)=>num+1;
-// const square=num=>num*num;
-// const compF=num=>num+1=>num*num
-// const incrementSquare=(compose(increment,square))
