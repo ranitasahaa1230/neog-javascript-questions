@@ -58,5 +58,23 @@ for(let i=1;i<=n;i++){
 //     }
 // }
 
+// Write a JavaScript program to compute the sum of all digits that occur in a given string.
+const n2=2345;
+const n3=n2.toString().split('');
+const n4=Number(n3.reduce((acc,cval)=>parseFloat(cval)+parseFloat(acc),0))
+// console.log(n4)
+
+// Write a JavaScript program that reverses a number.
+const n5=32243;
+const n6=parseFloat(n5.toString().split('').reverse().join(''))
+// console.log(n6)
+
+// Write a Program to cyclically Rotate a Number by X positions in the left direction, as provided by the user.
+const n7=1234;
+
+
+
+
+
 
 
