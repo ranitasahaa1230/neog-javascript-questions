@@ -21,6 +21,13 @@
 // * * *
 // * * * *
 // * * * * *
+let n=5;
+for(let i=1;i<=n;i++){
+    for(let j=1;j<=i;j++){
+        console.log("*");
+    }
+}
+console.log("\n");
 
 // Write a program to take a number input from user and print multiplication table 12 times for that number.
 
