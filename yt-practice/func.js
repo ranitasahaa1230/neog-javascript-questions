@@ -59,3 +59,5 @@ const input = [
 const input1=input.reduce((acc,cval)=>[...acc,...cval],[])
 const inp2=input.flat()
 // console.log(inp2);
+
+
